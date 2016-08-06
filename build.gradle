@@ -15,7 +15,7 @@ apply plugin: 'axion-release'
 
 scmVersion {
     tag {
-        prefix = 'javers'
+        prefix = 'zup-javers'
     }
 }
 
@@ -95,8 +95,8 @@ subprojects {
         inceptionYear '2013'
 
         scm {
-            connection 'scm:git:https://github.com/javers/javers.git'
-            url 'https://github.com/javers/javers'
+            connection 'scm:git:https://github.com/ZupIT/javers.git'
+            url 'https://github.com/ZupIT/javers'
         }
 
         licenses {
