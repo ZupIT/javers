@@ -123,9 +123,7 @@ subprojects {
     uploadArchives {
         repositories.mavenDeployer {
 
-            repository(url: 'http://archiva.aws.zup.com.br/repository/internal/'){
-                authentication(userName: mavenUser, password: mavenPassword)
-            }
+            repository(url: 'http://archiva.aws.zup.com.br/repository/internal/')
         }
     }
 
