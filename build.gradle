@@ -31,7 +31,7 @@ subprojects {
     targetCompatibility = 1.7
 
     project.group = 'org.javers'
-    project.version = 'zup-' + scmVersion.version
+    project.version = 'zup.' + scmVersion.version
 
     repositories {
         mavenCentral()
