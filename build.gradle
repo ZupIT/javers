@@ -12,6 +12,7 @@ buildscript {
 }
 
 apply plugin: 'axion-release'
+apply plugin: 'maven'
 
 scmVersion {
     tag {
@@ -119,7 +120,16 @@ subprojects {
         }
     }
 
-    bintray {
+    uploadArchives {
+        repositories.mavenDeployer {
+
+            repository(url: 'http://archiva.aws.zup.com.br/repository/internal/'){
+                authentication(userName: mavenUser, password: mavenPassword)
+            }
+        }
+    }
+
+    /*bintray {
         user = project.ext.has('bintrayUser') ? project.ext.bintrayUser : System.getenv('bintrayUser')
         key = project.ext.has('bintrayKey') ? project.ext.bintrayKey : System.getenv('bintrayKey')
 
@@ -137,5 +147,5 @@ subprojects {
                 }
             }
         }
-    }
+    }*/
 }
