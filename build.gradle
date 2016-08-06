@@ -15,7 +15,7 @@ apply plugin: 'axion-release'
 
 scmVersion {
     tag {
-        prefix = 'javers'
+        prefix = 'zup-javers'
     }
 }
 
@@ -30,7 +30,7 @@ subprojects {
     targetCompatibility = 1.7
 
     project.group = 'org.javers'
-    project.version = 'zup-' + scmVersion.version
+    project.version = scmVersion.version
 
     repositories {
         mavenCentral()
